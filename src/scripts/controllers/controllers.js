@@ -1,7 +1,8 @@
-myApp.controller('ContactsCtrl', function($scope, $location, $http) {
-	$http.get('http://localhost:3000/contacts').then(function sucessCallback (response){
-		$scope.contacts = response.data;
+myApp.controller('ContactsCtrl', function($scope, $location, $http, dataServices) {
+	var songsDisplay = dataServices.getAllItems().then(function sucessCallback (response){
+		$scope.songs = response.data;
 	});
+    
 	$scope.fields = ['#', 'Fist Name', 'Email', 'Phone number'];
 	//var data = {name: $scope.name}
 	$scope.save = function (newContact){
