@@ -1,0 +1,21 @@
+{
+  "name": "songs_apptest",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "hung tsou"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hungtsou/SongAppTest",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  }
+}
