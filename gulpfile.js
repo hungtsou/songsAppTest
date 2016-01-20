@@ -91,7 +91,7 @@ gulp.task('scripts', ['jshint'], function() {
 
 gulp.task('serve', ['build', 'watch'], function() {
 	plugins.connect.server({
-		root: build,
+		root: 'src/',
 		port: 4242,
 		livereload: true,
 		fallback: 'src/index.html'

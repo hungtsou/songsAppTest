@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="myApp" ng-strict-di>
+<html ng-app= "myApp">
 <head>
 	<title>Angular ES6 Sample</title>
+	<base href="/">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/global.css">
 </head>
-<body ng-controller="HomeController">
-
-	Hello {{ person.name | upper }}!
-
+<body>
+	<div class="container">
+		<header>
+			<img src="" alt="Hangar Logo"><h1>Hangar o’clock songs</h1>
+        </header>
+		<div class="row">
+			<div class="col-sm-12" ng-view></div>
+		</div>
+	</div>
+	
 	<script src="libs/angular.min.js"></script>
-	<script src="scripts/app.min.js"></script>
+	<script src="libs/angular-route.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers/controllers.js"></script>
 </body>
 </html>

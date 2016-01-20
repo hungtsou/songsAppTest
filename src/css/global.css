@@ -1,2 +1,7 @@
-h1 h2 {
-  color: red; }
+body {
+  background-color: #005b7f;
+  background: url(../img/main_body_background.png) center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
