@@ -1,0 +1,9 @@
+
+   
+<input type= "search" placeholder="search" ng-model="query">
+<div class="songsPanel jumbotron" ng-repeat = "song in songs | filter:query">
+   <audio src="" controls></audio>
+    <div class="songPanel" ng-click= "show(song.id)"><h6>{{song.songname}}</h6><span>{{song.artistname}}</span></div>
+    <button class ="btn" value="myvalue" onclick="myFunction()">Today</button>
+    <button class ="btn" value="myvalue" onclick="myFunction()">Friday</button>
+</div>

@@ -10,16 +10,8 @@ body {
   background-size: cover; }
 
 @font-face {
-  font-family: "din-medium";
-  src: url(../fonts/din_medium-webfont.ttf); }
+  font-family: "myfont";
+  src: url(../fonts/SameSameButDifferent.ttf); }
 
-@font-face {
-  font-family: "sameButDifferent";
-  src: local("../fonts/SameSameButDifferent.ttf"); }
-
-@font-face {
-  font-family: "titillium";
-  src: url(../fonts/TitilliumText22L001-webfont.otf); }
-
-header h1 {
-  font-family: "sameButDiferent"; }
+h1 {
+  font-family: "myfont"; }
