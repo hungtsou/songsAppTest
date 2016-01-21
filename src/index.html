@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html ng-app= "myApp">
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Angular ES6 Sample</title>
 	<base href="/">
-	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/global.css">
-	<link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<header>
-			<img src="img/main_logo.png" alt="Hangar Logo"><h1>Hangar oclock songs</h1>
+			<div class="row">
+				<div class="col-xs-4 col-sm-5" align="right"><img src="img/main_logo.png" alt="Hangar Logo"></div>
+				<div class="col-xs-8 col-sm-7" align="left"><h1>Hangar oclock songs</h1></div>
+			</div>
         </header>
-		<div class="row">
-			<div class="col-sm-12" ng-view></div>
-		</div>
+			<div class="" ng-view></div>
 	</div>
 	
 	<script src="libs/angular.min.js"></script>

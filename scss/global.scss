@@ -1,4 +1,22 @@
+@import "bootstrap";
 
+@mixin btnGradient ($from, $to, $default){
+      background-color: $default;
+       /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, $to, $from);
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, $to, $from);
+
+    /* IE 10 */
+    background: -ms-linear-gradient(top, $to, $from);
+
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, $to, $from);
+}
 * body {
     font-family: Arial;
 }
@@ -16,7 +34,105 @@ body {
   src:url(../fonts/SameSameButDifferent.ttf);
 }
 
+header .row {
+  margin-top: 60px;
+  .col-xs-8 {
+    padding-left: 6px; 
+  }
+  img {
+    width: 63px;
+  }
+  h1 {
+    font-size: 26px;
+    color: #fff;
+  } 
+}
+
 h1 {
   font-family:"myfont";
 }
+
+.playing-songs-ct {
+	position: absolute;
+	top: -50px;
+	width: 100%;
+	-webkit-transition: top 0.5s ease; /* Safari */
+  transition: top 0.5s ease;
+	&:hover {
+		position: absolute;
+		top:0;
+	}
+  .panel-body {
+    border-radius: 0 0 25px 25px;
+    width: 50%;
+    max-width: 150px;
+    float: right;
+    @include btnGradient (#fcbc22, #fff273, #fff273)
+  }
+}
+
+.seach-list > input[type="search"] {
+  width: 100%;
+  border-radius: 50px;
+  background: rgba(0, 110, 143, 0.9);
+  border: none;
+  box-shadow: inset 0 0px 3px rgba(74, 76, 76, 0.8);
+  margin: 11px auto;
+  padding: 4px 23px;
+  font-size: 15px;
+}
+
+.songsPanel.jumbotron {
+  padding: 0;
+}
+
+.songsPanel .content * {
+  float: left;
+}
+
+.songsPanel .content {
+  padding: 7px;
+  overflow: hidden;
+  audio {
+    width: 43px;
+  }
+  .description {
+      cursor: pointer;
+      width: 88px;
+      margin: 0 10px;
+      margin-right: 0;
+    h6:first-child {
+      margin: 0;
+      font-size: 11px;
+    }
+    h6 {
+      margin-bottom: 0;
+    }
+  }
+  .btn-ctrl {
+    float: right;
+    .btn:first-child {
+      border-right:1px solid #333;
+      border-radius: 7px 0px 0px 7px;
+    }
+    .btn {
+        @include btnGradient (#fcbc22, #fff273, #fff273)
+        border-radius: 0px 7px 7px 0px;
+        width: 41px;
+        padding: 9px;
+        font-size: 8px
+    }
+  }
+}
+
+.songs-list-ct .songsPanel {
+  background: rgba(128, 207, 220, 0.8);
+  &:nth-child(2n) {
+    background: rgba(77, 182, 201, 0.5);
+  }
+}
+
+@import "media-queries";
+
+
 

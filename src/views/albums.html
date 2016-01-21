@@ -1,9 +1,32 @@
+<div class="row">
+	<div class="playing-songs-ct col-sm-12">
+		<div class="panel panel-default" ng-model="playingSongs.song">
+			<div class="panel-heading"><p>{{playingSongs.song}}</p></div>
+			<div class="panel-body" align ="center">
+				Love Songs
+			</div>
+		</div>
+	</div>
+</div>
 
-   
-<input type= "search" placeholder="search" ng-model="query">
-<div class="songsPanel jumbotron" ng-repeat = "song in songs | filter:query">
-   <audio src="" controls></audio>
-    <div class="songPanel" ng-click= "show(song.id)"><h6>{{song.songname}}</h6><span>{{song.artistname}}</span></div>
-    <button class ="btn" value="myvalue" onclick="myFunction()">Today</button>
-    <button class ="btn" value="myvalue" onclick="myFunction()">Friday</button>
+
+
+<div class="container songs-list-ct">
+<div class="row">
+   	<div class="col-sm-12 seach-list" align="center">
+   		<input type= "search" placeholder="Search Music" ng-model="query">
+   	</div>
+   </div>   
+	<div class="songsPanel jumbotron" ng-repeat = "song in songs | filter:query">
+		<div class="content">
+			<audio src="" controls></audio>
+		    <div class="description" ng-click= "show(song.id)">
+		    	<h6>{{song.songname}}</h6><h6>{{song.artistname}}</h3>
+		    </div>
+		    <div class="btn-ctrl">
+		    	<button class ="btn" value="myvalue">Today</button>
+		    	<button class ="btn" value="myvalue" ng-click= "play(song.songname)">Love it</button>
+		    </div>
+		</div>
+	</div>
 </div>

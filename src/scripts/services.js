@@ -13,11 +13,8 @@ myApp.factory('dataServices', function($http) {
     getItemById: function(id) {
       return $http.get(baseUrl + '/' + id);
     },
-    saveItem: function(id, data) {
-      return $http.put(baseUrl + '/' + id, data);
-    },
-    addNewItem: function(data) {
-      return $http.post(baseUrl, data);
+    save: function(id, data) {
+      return $http.post(baseUrl + '/' + id, data);
     }
   };
 });
