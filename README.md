@@ -14,7 +14,7 @@ babel
 Json-server
 
 # Installation
-First you need to install gulp via npm
+First you need to install gulp,
 npm install -g gulp
 You need a local server for testing. Json-server is a good option because its very easy yo use
 npm install -g json-server
